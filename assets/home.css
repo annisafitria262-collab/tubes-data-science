@@ -1,42 +1,33 @@
 /* =====================================================================
-   ESTETIKA FINAL: EXECUTIVE SLEEK BERANDA (SERAGAM 100% DENGAN PAGES)
+   INTERNATIONAL TECH STARTUP INTERFACE - HOME.CSS (ZAHARA MASTERPIECE)
    ===================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-/* Reset Tipografi & Background Global */
-.stApp, div[data-testid="stMarkdownContainer"] p, span, label, th, td {
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
-}
+/* Reset Latar Belakang Global Beranda */
 .stApp {
     background-color: #f8fafc !important;
 }
 
-/* FIX MUTLAK ANTI-BUG SIDEBAR: Sembunyikan semua teks ikon arrow bawaan Streamlit yang bocor */
-button[title*="sidebar"],
-[data-testid="sidebar-close-button"],
-span[class*="Icon"], 
-div[class*="Icon"],
-div[class*="keyboard"], 
-span[class*="keyboard"],
-[data-testid="stSidebarNav"] h1 {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    height: 0px !important;
-    width: 0px !important;
-    font-size: 0px !important;
-    color: transparent !important;
-    margin: 0 !important;
-    padding: 0 !important;
+/* Tipografi Global Tanpa Merusak Ikon Streamlit */
+.stApp,
+div[data-testid="stMarkdownContainer"] p,
+label,
+th,
+td,
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
 
-/* Header Banner Utama - Lembut & Tipis Pas */
+
+/* Header Banner Utama Modul Detail */
 .slide-header {
     background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%) !important;
     padding: 30px !important;
     border-radius: 12px !important;
     margin-bottom: 20px !important;
-    margin-top: -30px !important;
 }
 .slide-header h1 {
     color: #ffffff !important;
@@ -58,50 +49,120 @@ span[class*="keyboard"],
 
 /* Judul Sub-Seksi */
 .slide-section-title {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
     font-weight: 600 !important;
     color: #0f172a !important;
-    margin-top: 25px !important;
+    margin-top: 35px !important;
     margin-bottom: 15px !important;
     text-transform: uppercase !important;
     letter-spacing: 0.05em !important;
 }
 
-/* Kotak Bersih Kontainer Data Utama (.chart-card-clean) */
+/* --- HERO SECTION CONTAINER --- */
+.global-hero-wrapper {
+    background: radial-gradient(circle at top right, #1e3a8a, #0f172a);
+    padding: 55px 40px;
+    border-radius: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.15);
+}
+
+.global-hero-tag {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.global-hero-title {
+    font-size: 2.6rem !important;
+    font-weight: 800 !important;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+    color: #ffffff !important;
+}
+
+.global-hero-subtitle {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- TEAM GRID System (Responsif) --- */
+.international-team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 35px;
+}
+
+.glass-member-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 18px 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.glass-member-card .member-identity {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin-bottom: 3px;
+}
+
+.glass-member-card .member-assignment {
+    font-size: 0.75rem;
+    color: #2563eb;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* --- KOTAK PUTIH KONTEN INTERNASIONAL (.chart-card-clean) --- */
 .chart-card-clean {
     background: #ffffff !important;
-    padding: 22px !important;
-    border-radius: 12px !important;
     border: 1px solid #e2e8f0 !important;
-    margin-bottom: 20px !important;
+    padding: 24px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 20px -10px rgba(15, 23, 42, 0.03) !important;
+    height: 100%;
+    margin-bottom: 20px;
 }
+
 .chart-card-clean h3 {
-    font-size: 1.05rem !important;
-    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
     color: #0f172a !important;
-    margin-bottom: 15px !important;
     margin-top: 0 !important;
+    margin-bottom: 14px !important;
 }
+
 .chart-card-clean p {
     font-size: 0.88rem !important;
     color: #475569 !important;
     line-height: 1.6 !important;
-    margin: 0 !important;
 }
 
-/* Info Callout Box Sisi Kanan */
-.status-callout {
-    background-color: #f0f9ff !important;
-    border-left: 4px solid #0284c7 !important;
-    padding: 15px 18px !important;
-    border-radius: 6px !important;
-    font-size: 0.85rem !important;
-    color: #0369a1 !important;
-    line-height: 1.5 !important;
-    margin-top: 12px !important;
+/* --- COMPACT LEADERBOARD MATRIX TABLE --- */
+.clean-table-wrapper {
+    width: 100% !important;
+    overflow-x: auto !important;
+    margin-bottom: 15px;
 }
 
-/* Desain Tabel Matriks Eksperimen Lengkap */
 .clean-table {
     width: 100% !important;
     border-collapse: collapse !important;
@@ -110,6 +171,7 @@ span[class*="keyboard"],
     overflow: hidden !important;
     border: 1px solid #e2e8f0 !important;
 }
+
 .clean-table th {
     background: #0f172a !important;
     color: #ffffff !important;
@@ -119,68 +181,143 @@ span[class*="keyboard"],
     font-weight: 600 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.05em !important;
-    border: none !important;
 }
+
 .clean-table td {
     padding: 12px 16px !important;
     border-bottom: 1px solid #e2e8f0 !important;
     font-size: 0.85rem !important;
     color: #334155 !important;
 }
+
 .clean-table tr.winner-row {
     background-color: #f0f9ff !important;
     font-weight: 600 !important;
 }
+
 .clean-table tr.winner-row td {
     color: #0369a1 !important;
 }
 
-/* CSS Bagan Pohon Keputusan Vertikal */
-.v-tree-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 0;
+.badge-winner {
+    background: #38bdf8;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-size: 0.68rem;
+    margin-left: 8px;
+    font-weight: 700;
 }
-.v-tree-node {
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    text-align: center;
-    min-width: 135px;
+
+.status-callout {
+    background-color: #f0f9ff !important;
+    border-left: 4px solid #0284c7 !important;
+    padding: 15px 18px !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    color: #0369a1 !important;
+    line-height: 1.5 !important;
+    margin-top: 15px !important;
 }
-.v-tree-node.dark {
-    background: #0f172a;
-    color: #ffffff;
+
+/* --- PIPELINE STEPPER WORKFLOW --- */
+.pipeline-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 10px;
 }
-.v-tree-node.slate {
-    background: #f8fafc;
-    color: #334155;
+
+.pipeline-step {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
     border: 1px solid #e2e8f0;
+    border-bottom: 4px solid #cbd5e1;
+    transition: 0.2s;
 }
-.v-tree-row-split {
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
-    width: 100%;
+
+.pipeline-step:hover {
+    border-color: #2563eb;
+    border-bottom-color: #2563eb;
+    transform: translateY(-2px);
 }
-.v-tree-leaf {
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-align: center;
-    width: 100%;
+
+.step-icon {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
 }
-.v-tree-leaf.comfort {
-    background: #ecfdf5;
-    color: #059669;
-    border: 1px solid #a7f3d0;
+
+.step-title {
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 5px;
+    font-size: 0.92rem;
 }
-.v-tree-leaf.uncomfort {
-    background: #fef2f2;
-    color: #dc2626;
-    border: 1px solid #fca5a5;
+
+.step-desc {
+    font-size: 0.8rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* --- INTERNATIONAL FOOTER --- */
+.premium-footer-zone {
+    text-align: center !important;
+    padding: 30px 0 15px 0 !important;
+    margin-top: 50px !important;
+    border-top: 1px solid #e2e8f0 !important;
+}
+
+.premium-footer-zone p {
+    font-size: 0.82rem !important;
+    color: #94a3b8 !important;
+    margin: 0 !important;
+    letter-spacing: 0.03em;
+}
+
+/* PRESERVE STREAMLIT SIDEBAR ICONS MATERIAL */
+/* =====================================================================
+   STREAMLIT ICON FIX (ANTI keyboard_double)
+   ===================================================================== */
+
+/* Jangan sentuh icon bawaan Streamlit */
+.material-symbols-rounded,
+.material-symbols-outlined,
+.material-icons,
+.material-icons-outlined {
+    font-family: "Material Symbols Rounded" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: inherit !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+}
+
+/* Sidebar navigation */
+[data-testid="stSidebarNav"] span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* Tombol collapse sidebar */
+[data-testid="collapsedControl"] span,
+button[kind="header"] span {
+    font-family: "Material Symbols Rounded" !important;
+}
+/* =====================================================================
+   📱 RESPONSIVE MEDIA QUERIES (ANTI-PECAH PROYECTOR PRESENTASI)
+   ===================================================================== */
+@media (max-width: 1024px) {
+    .international-team-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .pipeline-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .global-hero-title { font-size: 2.1rem !important; }
+}
+@media (max-width: 640px) {
+    .international-team-grid { grid-template-columns: 1fr !important; }
+    .pipeline-grid { grid-template-columns: 1fr !important; }
+    .global-hero-wrapper { padding: 35px 20px !important; }
+    .global-hero-title { font-size: 1.6rem !important; }
 }
