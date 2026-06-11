@@ -3,7 +3,13 @@ import pandas as pd
 import joblib
 import os
 import time
+import sklearn.compose._column_transformer
 
+if not hasattr(sklearn.compose._column_transformer, '_RemainderColsList'):
+    class _RemainderColsList(list):
+        pass
+    sklearn.compose._column_transformer._RemainderColsList = _RemainderColsList
+    
 # =====================================
 # PAGE CONFIG
 # =====================================
